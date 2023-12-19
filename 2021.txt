@@ -1,26 +1,26 @@
 2021:
 P4 Summer
-Variant 1: Q2,Q3 Done (Q1 ADT) All same
-Variant 2: Q2,Q3 Done (Q1 ADT) 
-Variant 3: Q2,Q3 Done (Q1 ADT)
+Variant 1: Q2,Q3 Done (Q1 ADT) All same :D
+Variant 2: Q2,Q3 Done (Q1 ADT) :D
+Variant 3: Q2,Q3 Done (Q1 ADT) :D
 
 Winter
 Variant 1: Same
-Variant 2: Q1,Q2 Done (Q3 ADT)
+Variant 2: Q1,Q2 Done (Q3 ADT) :D
 
 2022:
 P4 Summer
-Variant 1: Q1,Q2 Done (Q3 ADT)
-Variant 2: Q2,Q3 Done (Q1 ADT)
-Variant 3: Q1,Q2 Done (Q3 ADT)
+Variant 1: Q1,Q2 Done (Q3 ADT) :D
+Variant 2: Q2,Q3 Done (Q1 ADT) :D
+Variant 3: Q1,Q2 Done (Q3 ADT) :D
 
 Winter
-Variant 1: Q1,Q2 Done (Q3 ADT) (V3 SAME)
-Variant 2: Q1,Q2 Done (Q3 ADT)
-Variant 3: Q1,Q2 Done (Q3 ADT)
+Variant 1: Q1,Q2 Done (Q3 ADT) (V3 SAME) :D
+Variant 2: Q1,Q2 Done (Q3 ADT) :D
+Variant 3: Q1,Q2 Done (Q3 ADT) :D
 
 2023:
 P4
-Variant 1: Q1,Q2 Done (Q3 ADT)
-Variant 2: Q1,Q3 Done (Q2 ADT)
-Variant 3: Q1,Q2 Done (Q3 ADT)
+Variant 1: Q1,Q2 Done (Q3 ADT) :D
+Variant 2: Q1,Q3 Done (Q2 ADT) :D
+Variant 3: Q1,Q2 Done (Q3 ADT) :D

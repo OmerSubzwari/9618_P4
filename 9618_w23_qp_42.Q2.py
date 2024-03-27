@@ -1,70 +1,25 @@
-circularqueue = []  # Saledata, 5 items
-head = 0
-tail = 0
-numberofitems = 0
+def iterative_calculator(num):
 
+    find = num
+    total = 0
 
-def enqueue(newrec):
-    global numberofitems
-    global head
-    global tail
-    if numberofitems == 5:
-        return -1
+    while num != 0:
+        if find % num == 0:
+            total += num
+
+        num -= 1
+    return total
+
+def recursive_value(num, find):
+
+    if num == 0:
+        return 0
     else:
-        circularqueue[tail] = newrec
-        if tail == 4:
-            tail = 0
+        if find % num == 0:
+            return num + recursive_value(num - 1, find)
         else:
-            tail += 1
-        numberofitems += 1
-        return 1
+            return recursive_value(num - 1, find)
 
 
-def dequeue():
-    global numberofitems
-    global head
-    global tail
-    pop = saledata("", -1)
-    if numberofitems != 0:
-        pop = circularqueue[head]
-        numberofitems -= 1
-        if head == 4:
-            head = 0
-        else:
-            head += 1
-    return pop
-
-
-def enterecord():
-    id = str(input("Enter item id: "))
-    quant = int(input("Enter number of items: "))
-    record = saledata(id, quant)
-    if enqueue(record) == -1:
-        print("Full")
-    else:
-        print("Stored")
-
-
-class saledata:
-    def __init__(self, id, quantity):
-        self.saleid = id
-        self.quantity = quantity
-
-
-for i in range(0, 5):
-    circularqueue.append((saledata("", -1)))
-
-enterecord()
-enterecord()
-enterecord()
-enterecord()
-enterecord()
-enterecord()
-outch = dequeue()
-if outch.saleid == "":
-    print("No items on this ID")
-else:
-    print(f"id: {outch.saleid}, quantity: {outch.quantity}")
-enterecord()
-for i in range(0, 5):
-    print(f"{circularqueue[i].saleid}, {circularqueue[i].quantity}")
+print(iterative_calculator(10))
+print(recursive_value(50, 50))

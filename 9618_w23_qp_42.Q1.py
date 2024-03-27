@@ -1,29 +1,69 @@
-global animals
-animals = []  # Array animals to store 10 elements
+def push_data(alpha):
+    global vowel_top, consonant_top
 
-animals.append("horse")
-animals.append("lion")
-animals.append("rabbit")
-animals.append("mouse")
-animals.append("bird")
-animals.append("deer")
-animals.append("whale")
-animals.append("elephant")
-animals.append("kangaroo")
-animals.append("tiger")
+    if alpha == "a" or alpha == "e" or alpha == "i" or alpha == "o" or alpha == "u":
 
+        if stack_vowel == 100:
+            print("Stack is full")
+        else:
+            stack_vowel.append(alpha)
+            vowel_top += 1
+    else:
 
-def sortdescending():
-    arraylength = len(animals)
-    for i in range(arraylength - 1):
-        for y in range(arraylength - i - 1):
-            if animals[y][0] < animals[y + 1][0]:
-                temp = animals[y]
-                animals[y] = animals[y + 1]
-                animals[y + 1] = temp
+        if stack_consonant == 100:
+            print("Stack is full")
+        else:
+            stack_consonant.append(alpha)
+            consonant_top += 1
 
 
+def read_data():
+    try:
+        with open("StackData.txt", 'r') as data:
+            for line in data:
+                push_data(line.strip())
 
-sortdescending()
-for i in range(0, 10):
-    print(animals[i])
+    except FileNotFoundError:
+        print("File not found")
+
+
+def pop_vowel():
+    global vowel_top
+
+    if vowel_top == 0:
+        return "No Data"
+    else:
+        stack_vowel.pop()
+        vowel_top -= 1
+        return stack_vowel[-1]
+
+
+def pop_consonant():
+    global consonant_top
+
+    if consonant_top == 0:
+        return "No Data"
+    else:
+        stack_consonant.pop()
+        consonant_top -= 1
+        return stack_consonant[-1]
+
+
+stack_vowel = []  # string of 100 letters
+stack_consonant = []  # string of 100 letters
+
+global vowel_top  # declared as integer
+global consonant_top  # declared as integer
+vowel_top = 0
+consonant_top = 0
+
+read_data()
+storage = ""
+for i in range(5):
+    user = input("Enter your choice, 'Vowel', 'Consonant': ")
+    if user == "Vowel":
+        storage += pop_vowel()
+    else:
+        storage += pop_consonant()
+
+print(storage)
